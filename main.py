@@ -46,12 +46,11 @@ def pierwsza_strona():
                 else:
                     print(INNE)
                 break
-        elif start != '2':                      # poprzednio ta i następna opcja były zamienione
-            print(INNE)                         # ale przy inpucie innym niż 1 lub 2 printowało INNE w nieskończoność
-            break                               # a break psuł zmienne 'lista' i 'słówka'
-        else:                                   # teraz nie pisze w nieskończoność, za to kończy program
-            print('Do widzenia, do jutra!')     # nie mam pewności czy to postęp czy regres
-            break                               # z pozdrowieniami, typ niepokorny
+        elif start == '2':
+            print('Do widzenia, do jutra!')
+            break
+        else:
+           start = '0'
 
 
 pierwsza_strona()
